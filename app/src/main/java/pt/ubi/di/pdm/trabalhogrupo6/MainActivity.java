@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
         }
 
         AppDatabase.databaseWriteExecutor.execute(() -> {
-            TaskEntity newTask = new TaskEntity(title, "", false);
+            TaskEntity newTask = new TaskEntity(title, false);
             db.taskDao().insert(newTask);
 
             runOnUiThread(() -> {

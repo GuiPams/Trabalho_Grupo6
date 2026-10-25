@@ -16,18 +16,13 @@ public class TaskEntity {
     @ColumnInfo(name = "title")
     private String title;
 
-    // coluna para a descrição da tarefa
-    @ColumnInfo(name = "description")
-    private String description;
-
     // coluna para o estado da tarefa
     @ColumnInfo(name = "is_completed")
     private boolean isCompleted;
 
     // construtor para criar uma nova tarefa
-    public TaskEntity(String title, String description, boolean isCompleted) {
+    public TaskEntity(String title, boolean isCompleted) {
         this.title = title;
-        this.description = description;
         this.isCompleted = isCompleted;
     }
 
@@ -43,12 +38,6 @@ public class TaskEntity {
     }
     public void setTitle(String title) {
         this.title = title;
-    }
-    public String getDescription() {
-        return description;
-    }
-    public void setDescription(String description) {
-        this.description = description;
     }
     public boolean isCompleted() {
         return isCompleted;
